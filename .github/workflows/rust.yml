@@ -18,13 +18,5 @@ jobs:
       run: cargo build --release
     - uses: actions/upload-artifact@v3
       with:
-        name: SaveTheOOF.exe
+        name: SaveTheOOF
         path: target/release/save-the-oof.exe
-    - uses: MCJack123/ghaction-generate-release-hashes@v1
-      with:
-        hash-type: sha256
-        file-name: target/release/save-the-oof.exe
-    - uses: actions/upload-artifact@v3
-      with:
-        name: Asset Hashes
-        path: hashes.txt
